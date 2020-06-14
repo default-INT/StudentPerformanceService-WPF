@@ -42,7 +42,13 @@ namespace StudentPerformanceServiceCL.Models.Entities.Accounts
                 return group;
             }
         }
-        public IEnumerable<TestResult> TestResults => db.TestDAO.TestResults
-            .Where(t => t.StudentId == Id);
+
+        public int? Course => Convert.ToInt32(Math.Round((double) Group.Semester / 2));
+
+        public IEnumerable<TestResult> TestResults
+        {
+            get => db.TestDAO.TestResults
+                .Where(t => t.StudentId == Id);
+        }
     }
 }

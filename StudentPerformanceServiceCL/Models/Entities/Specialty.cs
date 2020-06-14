@@ -20,7 +20,21 @@ namespace StudentPerformanceServiceCL.Models.Entities
         [Column(Name = "faculty_id")]
         public int FacultyId { get; set; }
 
-        public Faculty Faculty { get; set; }
+        public Subject HardSubject => Subjects
+            .ToList()
+            .Where(s => s.TestResults.Count() != 0)
+            .OrderBy(s => s.TestResults.Average(t => t.Mark))
+            .FirstOrDefault();
+
+        public Subject EasySubject => Subjects
+            .ToList()
+            .Where(s => s.TestResults.Count() != 0)
+            .OrderByDescending(s => s.TestResults.Average(t => t.Mark))
+            .FirstOrDefault();
+
+        public Faculty Faculty => db.FacultyDAO.Faculties
+            .FirstOrDefault(f => f.Id == FacultyId);
+
         public IEnumerable<Subject> Subjects => db.SubjectSpecialtyDAO.SubjectSpecialties
             .Where(s => s.SpecialtyId == Id)
             .Select(s => s.Subject);

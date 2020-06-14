@@ -95,7 +95,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\AdminPages\ReportOnSpecialtiesUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AdminPages\ReportOnStudentUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AdminPages\ReportStudentPerformanceUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -124,8 +132,14 @@
     <Compile Include="Pages\AdminPages\AdminButtonsUserControl.xaml.cs">
       <DependentUpon>AdminButtonsUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\AdminPages\ReportOnSpecialtiesUserControl.xaml.cs">
+      <DependentUpon>ReportOnSpecialtiesUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AdminPages\ReportOnStudentUserControl.xaml.cs">
       <DependentUpon>ReportOnStudentUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdminPages\ReportStudentPerformanceUserControl.xaml.cs">
+      <DependentUpon>ReportStudentPerformanceUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\MethodistDeaneryPages\MethodistDeaneryUserControl.xaml.cs">
       <DependentUpon>MethodistDeaneryUserControl.xaml</DependentUpon>

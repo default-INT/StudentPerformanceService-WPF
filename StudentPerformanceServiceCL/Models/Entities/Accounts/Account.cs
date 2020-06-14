@@ -19,6 +19,7 @@ namespace StudentPerformanceServiceCL.Models.Entities.Accounts
 
         public Account(Account account)
         {
+            Id = account.Id;
             Login = account.Login;
             Password = account.Password;
             FullName = account.FullName;

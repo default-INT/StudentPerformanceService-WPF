@@ -122,7 +122,15 @@
     <Compile Include="Models\Entities\Tests\Test.cs" />
     <Compile Include="Models\Entities\Tests\TestResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\StudentFilterService.cs" />
+    <Compile Include="Services\StudentFilters\CourseStudentFilter.cs" />
+    <Compile Include="Services\StudentFilters\FacultyStudentFilter.cs" />
+    <Compile Include="Services\StudentFilters\SessionStudentFilter.cs" />
+    <Compile Include="Services\StudentFilters\SpecialtyStudentFilter.cs" />
+    <Compile Include="Services\StudentFilters\StudentFilter.cs" />
+    <Compile Include="Services\StudentFilters\StudentFilterDecorator.cs" />
     <Compile Include="Services\UserService.cs" />
+    <Compile Include="Services\ViewModels\StudentViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

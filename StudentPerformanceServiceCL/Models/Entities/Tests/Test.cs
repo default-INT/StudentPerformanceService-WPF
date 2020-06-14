@@ -41,6 +41,7 @@ namespace StudentPerformanceServiceCL.Models.Entities.Tests
 
         public Test(Test test)
         {
+            Id = test.Id;
             Date = test.Date;
             SubjectId = test.SubjectId;
             GroupId = test.GroupId;
@@ -92,6 +93,9 @@ namespace StudentPerformanceServiceCL.Models.Entities.Tests
                 return students;
             }
         }
+
+        public IEnumerable<TestResult> TestResults => db.TestDAO.TestResults
+            .Where(t => t.TestId == Id);
 
         public Test Cast()
         {

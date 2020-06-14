@@ -18,5 +18,8 @@ namespace StudentPerformanceServiceCL.Models.Entities
 
         public IEnumerable<Test> Tests => db.TestDAO.Tests
             .Where(t => t.SessionId == Id);
+
+        public override string ToString() =>
+            (Season ? "Зимняя " : "Летняя ") + "сессия " + Year + " года";
     }
 }

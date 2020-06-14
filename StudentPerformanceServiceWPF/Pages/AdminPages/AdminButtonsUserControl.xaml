@@ -32,19 +32,21 @@
                 группу
             </TextBlock>
         </Button>
-        <Button x:Name="studentReportButton" HorizontalAlignment="Left" FontSize="14" Margin="497,10,0,0" VerticalAlignment="Top" Width="110" Height="65" Cursor="Hand">
+        <Button x:Name="studentReportButton" HorizontalAlignment="Left" FontSize="14" Margin="497,10,0,0" VerticalAlignment="Top" Width="110" Height="65" 
+                Cursor="Hand" Click="StudentReportButton_Click">
             <TextBlock>
                 Отчёт по <LineBreak/>
                 студентам
             </TextBlock>
         </Button>
-        <Button x:Name="reportOnSpecialtyButton" HorizontalAlignment="Left" FontSize="14" Margin="618,10,0,0" VerticalAlignment="Top" Width="110" Height="65" Cursor="Hand">
+        <Button x:Name="reportOnSpecialtyButton" HorizontalAlignment="Left" FontSize="14" Margin="618,10,0,0" VerticalAlignment="Top" Width="110" Height="65" 
+                Cursor="Hand" Click="ReportOnSpecialtyButton_Click">
             <TextBlock>
                 Отчёт по <LineBreak/>
                 специальности
             </TextBlock>
         </Button>
-        <Button x:Name="reportStudentPerformanceButton" HorizontalAlignment="Left" FontSize="14" Margin="735,10,0,0" VerticalAlignment="Top" Width="110" Height="65" Cursor="Hand">
+        <Button x:Name="reportStudentPerformanceButton" Click="ReportStudentPerformanceButton_Click" HorizontalAlignment="Left" FontSize="14" Margin="735,10,0,0" VerticalAlignment="Top" Width="110" Height="65" Cursor="Hand">
             <TextBlock>
                 Отчёт по <LineBreak/>
                 успеваемости  <LineBreak/>

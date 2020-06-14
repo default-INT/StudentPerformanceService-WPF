@@ -2,6 +2,7 @@
 using StudentPerformanceServiceCL.Models.Data;
 using StudentPerformanceServiceCL.Models.Entities;
 using StudentPerformanceServiceCL.Services;
+using StudentPerformanceServiceCL.Services.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,36 +22,30 @@ using System.Xml.Linq;
 namespace StudentPerformanceServiceWPF.Pages.AdminPages
 {
     /// <summary>
-    /// Логика взаимодействия для ReportOnStudentUserControl.xaml
+    /// Логика взаимодействия для ReportStudentPerformanceUserControl.xaml
     /// </summary>
-    public partial class ReportOnStudentUserControl : UserControl
+    public partial class ReportStudentPerformanceUserControl : UserControl
     {
         private readonly StudentFilterService studentFilter;
+        private Session selectSession;
         private string selectFaculty;
         private string selectSepcialty;
-        private int? selectCourse;
 
-        public ReportOnStudentUserControl()
+        public ReportStudentPerformanceUserControl()
         {
             InitializeComponent();
+
 
             studentFilter = new StudentFilterService();
 
             StartupLoad();
 
-            ElementManager.Instance.ChangeTitleText("Отчёт по студентам");
+            ElementManager.Instance.ChangeTitleText("Отчёт по успеваемости студентов");
 
             facultyComboBox.SelectionChanged += (s, e) =>
             {
                 var comboBox = (ComboBox)s;
                 selectFaculty = comboBox.SelectedIndex == 0 ? null : ((Faculty)comboBox.SelectedItem).Name;
-                LoadStudents();
-            };
-            courseComboBox.SelectionChanged += (s, e) =>
-            {
-                var comboBox = (ComboBox)s;
-                selectCourse = comboBox.SelectedIndex == 0 ? new int?() : 
-                    int.Parse((string)((ComboBoxItem)comboBox.SelectedItem).Content);
                 LoadStudents();
             };
             specialtyComboBox.SelectionChanged += (s, e) =>
@@ -59,12 +54,19 @@ namespace StudentPerformanceServiceWPF.Pages.AdminPages
                 selectSepcialty = comboBox.SelectedIndex == 0 ? null : ((Specialty)comboBox.SelectedItem).Name;
                 LoadStudents();
             };
+            sessionComboBox.SelectionChanged += (s, e) =>
+            {
+                var comboBox = (ComboBox)s;
+                selectSession = comboBox.SelectedIndex == 0 ? null : ((Session)comboBox.SelectedItem);
+                LoadStudents();
+            };
         }
 
         private void StartupLoad()
         {
             LoadSpecialties();
             LoadFaculies();
+            LoadSessions();
             LoadStudents();
         }
 
@@ -92,9 +94,21 @@ namespace StudentPerformanceServiceWPF.Pages.AdminPages
             }
         }
 
+        private void LoadSessions()
+        {
+            var db = DAOFactory.GetDAOFactory();
+            IEnumerable<Session> sessions = db.SessionDAO.Sessions;
+            sessionComboBox.Items.Clear();
+            sessionComboBox.Items.Add("(Все сессии)");
+            foreach (var session in sessions)
+            {
+                sessionComboBox.Items.Add(session);
+            }
+        }
+
         private async void LoadStudents()
-        {           
-            await Task.Run(() => studentFilter.GetStudents(selectFaculty, selectSepcialty, selectCourse));
+        {
+            await Task.Run(() => studentFilter.GetStudents(selectFaculty, selectSepcialty, session: selectSession));
 
             dataGrid.Items.Clear();
 

@@ -47,5 +47,20 @@ namespace StudentPerformanceServiceWPF.Pages.AdminPages
         {
             elementManager.SetContent(new AddGroupUserControl());
         }
+
+        private void StudentReportButton_Click(object sender, RoutedEventArgs e)
+        {
+            elementManager.SetContent(new ReportOnStudentUserControl());
+        }
+
+        private void ReportOnSpecialtyButton_Click(object sender, RoutedEventArgs e)
+        {
+            elementManager.SetContent(new ReportOnSpecialtiesUserControl());
+        }
+
+        private void ReportStudentPerformanceButton_Click(object sender, RoutedEventArgs e)
+        {
+            elementManager.SetContent(new ReportStudentPerformanceUserControl());
+        }
     }
 }

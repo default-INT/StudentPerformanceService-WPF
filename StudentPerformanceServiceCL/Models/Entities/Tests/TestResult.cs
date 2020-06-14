@@ -14,10 +14,15 @@ namespace StudentPerformanceServiceCL.Models.Entities.Tests
     [Table(Name = "test_results")]
     public class TestResult : Entity
     {
+        [Column(Name = "test_id")]
         public int TestId { get; set; }
+        [Column(Name = "student_id")]
         public int StudentId { get; set; }
+        [Column(Name = "completion_date")]
         public DateTime CompletionDate { get; set; }
+        [Column(Name = "mark")]
         public int Mark { get; set; }
+        [Column(Name = "attempts_number")]
         public int AttemptsNumber { get; set; }
 
         public Test Test => db.TestDAO.Tests
