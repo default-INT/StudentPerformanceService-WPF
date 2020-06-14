@@ -37,5 +37,15 @@ namespace StudentPerformanceServiceWPF.Pages.AdminPages
         {
             elementManager.SetContent(new AddSessionUserControl());
         }
+
+        private void SubjectAddButton_Click(object sender, RoutedEventArgs e)
+        {
+            elementManager.SetContent(new AddSubjectUserControl());
+        }
+
+        private void GroupAddButton_Click(object sender, RoutedEventArgs e)
+        {
+            elementManager.SetContent(new AddGroupUserControl());
+        }
     }
 }

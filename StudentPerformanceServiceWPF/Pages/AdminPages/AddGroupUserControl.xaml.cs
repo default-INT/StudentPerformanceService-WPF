@@ -18,22 +18,22 @@ using System.Windows.Shapes;
 namespace StudentPerformanceServiceWPF.Pages.AdminPages
 {
     /// <summary>
-    /// Логика взаимодействия для AddSubjectUserControl.xaml
+    /// Логика взаимодействия для AddGroupUserControl.xaml
     /// </summary>
-    public partial class AddSubjectUserControl : UserControl
+    public partial class AddGroupUserControl : UserControl
     {
-        public AddSubjectUserControl()
+        public AddGroupUserControl()
         {
             InitializeComponent();
 
-            ElementManager.Instance.ChangeTitleText("Добавление новой дисциплины");
+            ElementManager.Instance.ChangeTitleText("Добавление новой группы");
             LoadSpecialties();
         }
 
         private async void LoadSpecialties()
         {
             IEnumerable<Specialty> specialties = null;
-            await Task.Run(() => 
+            await Task.Run(() =>
             {
                 var db = DAOFactory.GetDAOFactory();
                 specialties = db.SpecialtyDAO.Specialties;
@@ -51,20 +51,22 @@ namespace StudentPerformanceServiceWPF.Pages.AdminPages
             try
             {
                 var name = nameTextBox.Text;
-                var teacher = teacherFullNameTextBox.Text;
-                var specialty = (Specialty)specialtiesComboBox.SelectedValue;
+                var semester = int.Parse(semesterTextBox.Text);
+                var specialty = (Specialty)specialtiesComboBox.SelectedItem;
+
                 var db = DAOFactory.GetDAOFactory();
 
-                db.SubjectDAO.Add(new Subject()
+                db.GroupDAO.Add(new Group()
                 {
                     Name = name,
-                    Teacher = teacher
-                }, specialty);
+                    Semester = semester,
+                    SpecialtyId = specialty.Id
+                });
 
                 nameTextBox.Text = string.Empty;
-                teacherFullNameTextBox.Text = string.Empty;
+                semesterTextBox.Text = string.Empty;
 
-                msgLabel.Content = "Дисциплина успешно добавлена";
+                msgLabel.Content = "Группа успешно добавлена";
             }
             catch (Exception ex)
             {

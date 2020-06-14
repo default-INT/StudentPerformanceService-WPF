@@ -11,6 +11,6 @@ namespace StudentPerformanceServiceCL.Models.Data
     {
         IEnumerable<Subject> Subjects { get; }
 
-        void Add(Subject subject);
+        void Add(Subject subject, Specialty specialty);
     }
 }

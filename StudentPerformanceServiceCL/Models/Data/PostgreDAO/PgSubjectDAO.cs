@@ -18,9 +18,28 @@ namespace StudentPerformanceServiceCL.Models.Data.PostgreDAO
 
         public IEnumerable<Subject> Subjects => _context.Subjects;
 
-        public void Add(Subject subject)
+        public void Add(Subject subject, Specialty specialty)
         {
-            _context.Subjects.InsertOnSubmit(subject);
+            var exitSubject = _context.Subjects
+                .FirstOrDefault(s => s.Name == subject.Name && s.Teacher == subject.Teacher);
+            if (exitSubject != null)
+            {
+                subject = exitSubject;
+            }
+            else
+            {
+                _context.Subjects.InsertOnSubmit(subject);
+
+                _context.SubmitChanges();
+            }
+            
+
+            _context.SubjectSpecialties
+                .InsertOnSubmit(new SubjectSpecialty()
+                {
+                    SpecialtyId = specialty.Id,
+                    SubjectId = subject.Id
+                });
 
             _context.SubmitChanges();
         }

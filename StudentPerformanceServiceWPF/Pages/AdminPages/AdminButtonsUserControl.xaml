@@ -20,13 +20,13 @@
                 сессию
             </TextBlock>
         </Button>
-        <Button x:Name="facultyAddButton" HorizontalAlignment="Left" FontSize="14" Margin="253,10,0,0" VerticalAlignment="Top" Width="110" Height="65" Cursor="Hand">
+        <Button x:Name="subjectAddButton" HorizontalAlignment="Left" FontSize="14" Margin="253,10,0,0" VerticalAlignment="Top" Width="110" Height="65" Cursor="Hand" Click="SubjectAddButton_Click">
             <TextBlock>
                 Добавить <LineBreak/>
                 предмет
             </TextBlock>
         </Button>
-        <Button x:Name="groupAddButton" HorizontalAlignment="Left" FontSize="14" Margin="375,10,0,0" VerticalAlignment="Top" Width="110" Height="65" Cursor="Hand">
+        <Button x:Name="groupAddButton" HorizontalAlignment="Left" FontSize="14" Margin="375,10,0,0" VerticalAlignment="Top" Width="110" Height="65" Cursor="Hand" Click="GroupAddButton_Click">
             <TextBlock>
                 Добавить <LineBreak/>
                 группу

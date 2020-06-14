@@ -5,8 +5,19 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:StudentPerformanceServiceWPF.Pages.AdminPages"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="395" d:DesignWidth="855">
     <Grid>
-            
+        <Label Content="Введите название дисциплины:" FontSize="16" HorizontalAlignment="Left" Margin="176,42,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" FontSize="16" Height="30" Margin="422,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215"/>
+        <Label Content="Введите ФИО преподавателя:" FontSize="16" HorizontalContentAlignment="Right" HorizontalAlignment="Left"
+               Margin="190,98,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="teacherFullNameTextBox" HorizontalAlignment="Left" FontSize="16" Height="30" Margin="422,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215"/>
+        <Label Content="Выберите специальность:" FontSize="16" HorizontalContentAlignment="Right" HorizontalAlignment="Left"
+            Margin="218,149,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="msgLabel" FontSize="16" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="10,209,10,0" VerticalAlignment="Top" Width="835"/>
+        <ComboBox x:Name="specialtiesComboBox" HorizontalAlignment="Left" FontSize="16" Height="30" Margin="422,150,0,0" VerticalAlignment="Top" Width="215" />
+        <Button x:Name="addButton" Content="Добавить" FontSize="16" Background="Green" Foreground="White" Cursor="Hand" HorizontalAlignment="Center"
+            Margin="366,292,353,0" VerticalAlignment="Top" Width="136" Height="44" Click="AddButton_Click"/>
+
     </Grid>
 </UserControl>

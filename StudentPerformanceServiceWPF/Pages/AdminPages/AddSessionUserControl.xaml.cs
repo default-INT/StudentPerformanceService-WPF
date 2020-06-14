@@ -25,6 +25,7 @@ namespace StudentPerformanceServiceWPF.Pages.AdminPages
         public AddSessionUserControl()
         {
             InitializeComponent();
+            ElementManager.Instance.ChangeTitleText("Назначение сессии");
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)

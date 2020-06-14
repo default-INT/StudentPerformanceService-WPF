@@ -20,6 +20,9 @@ namespace StudentPerformanceServiceCL.Models.Data.PostgreDAO
 
         public void Add(Session session)
         {
+            if (_context.Sessions
+                .FirstOrDefault(s => s.Year == session.Year && s.Season == session.Season) != null)
+                throw new Exception("Данная сессия уже назначена");
             _context.Sessions.InsertOnSubmit(session);
 
             _context.SubmitChanges();

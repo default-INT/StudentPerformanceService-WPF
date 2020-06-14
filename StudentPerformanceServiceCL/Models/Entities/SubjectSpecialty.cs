@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace StudentPerformanceServiceCL.Models.Entities
 {
-    [Table(Name = "subjects_specialtys")]
+    [Table(Name = "subjects_specialties")]
     internal class SubjectSpecialty : Entity
     {
         [Column(Name = "subject_id")]
