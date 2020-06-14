@@ -12,7 +12,7 @@
         <Label FontSize="14pt" Content="Логин:" HorizontalAlignment="Left" Margin="52,148,0,0" VerticalAlignment="Top"/>
         <Label FontSize="14pt" Content="Пароль:" HorizontalAlignment="Left" Margin="40,204,0,0" VerticalAlignment="Top"/>
         <PasswordBox x:Name="passwordTextBox" FontSize="16pt" HorizontalAlignment="Left" Height="34" Margin="142,205,0,0" VerticalAlignment="Top" Width="227"/>
-        <Button x:Name="logInButton" Click="LogInButton_Click" Content="Войти" FontSize="16pt" Background="Green" Foreground="White" HorizontalAlignment="Left" Margin="102,318,0,0" VerticalAlignment="Top" Width="202" Height="40"/>
+        <Button x:Name="logInButton" Click="LogInButton_Click" Content="Войти" FontSize="16pt" Cursor="Hand" Background="Green" Foreground="White" HorizontalAlignment="Left" Margin="102,318,0,0" VerticalAlignment="Top" Width="202" Height="40"/>
         <Label x:Name="msgLable" FontSize="14pt" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="10,265,0,0" VerticalAlignment="Top" Width="395" />
 
     </Grid>

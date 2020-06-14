@@ -13,6 +13,7 @@ namespace StudentPerformanceServiceCL.Models.Data
         IEnumerable<Student> Students { get; }
 
         Account LogIn(string login, string password);
+        void Add(Account account);
         void Remove(Student student);
     }
 }

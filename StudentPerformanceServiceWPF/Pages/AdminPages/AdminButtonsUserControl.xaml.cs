@@ -13,16 +13,24 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace StudentPerformanceServiceWPF.Pages.Admin
+namespace StudentPerformanceServiceWPF.Pages.AdminPages
 {
     /// <summary>
     /// Логика взаимодействия для AdminButtonsUserControl.xaml
     /// </summary>
     public partial class AdminButtonsUserControl : UserControl
     {
+        private readonly ElementManager elementManager;
         public AdminButtonsUserControl()
         {
             InitializeComponent();
+
+            elementManager = ElementManager.Instance;
+        }
+
+        private void AddUserButton_Click(object sender, RoutedEventArgs e)
+        {
+            elementManager.SetContent(new AddUserUserControl());
         }
     }
 }

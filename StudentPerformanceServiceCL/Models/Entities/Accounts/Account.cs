@@ -24,6 +24,7 @@ namespace StudentPerformanceServiceCL.Models.Entities.Accounts
             FullName = account.FullName;
             Role = account.Role;
             __groupId = account.__groupId;
+            __facultyId = account.__facultyId;
         }
         [Column(Name = "login")]
         public string Login { get; set; }
@@ -37,6 +38,8 @@ namespace StudentPerformanceServiceCL.Models.Entities.Accounts
         public int? __groupId { get; set; }
         [Column(Name = "faculty_id")]
         public int? __facultyId { get; set; }
+
+        public virtual string Status => throw new Exception("Account undefined!");
 
         public Account Cast()
         {

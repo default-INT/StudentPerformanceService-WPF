@@ -20,12 +20,16 @@ namespace StudentPerformanceServiceCL.Models.Entities.Accounts
         }
         private Group group;
 
+        public override string Status => "Студент";
+
         public Student()
         {
+            Role = 2;
         }
 
         public Student(Account account) : base(account)
         {
+            Role = 2;
         }
 
         public Group Group

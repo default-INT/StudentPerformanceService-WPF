@@ -18,5 +18,7 @@ namespace StudentPerformanceServiceCL.Models.Entities
 
         public IEnumerable<Specialty> Specialties => db.SpecialtyDAO.Specialties
             .Where(s => s.FacultyId == Id);
+
+        public override string ToString() => Name;
     }
 }

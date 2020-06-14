@@ -26,6 +26,13 @@ namespace StudentPerformanceServiceCL.Models.Data.PostgreDAO
             .AsEnumerable()
             .Select(a => new Student(a));
 
+        public void Add(Account account)
+        {
+            _context.Accounts.InsertOnSubmit(new Account(account));
+
+            _context.SubmitChanges();
+        }
+
         public Account LogIn(string login, string password)
         {
             var account = _context.Accounts

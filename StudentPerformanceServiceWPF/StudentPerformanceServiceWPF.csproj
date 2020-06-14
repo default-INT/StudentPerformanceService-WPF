@@ -75,14 +75,35 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\Admin\AdminButtonsUserControl.xaml">
+    <Page Include="Pages\AdminPages\AddUserUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AdminPages\AdminButtonsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MethodistDeaneryPages\MethodistDeaneryUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\StudentPages\StudentUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\Admin\AdminButtonsUserControl.xaml.cs">
+    <Compile Include="Pages\AdminPages\AddUserUserControl.xaml.cs">
+      <DependentUpon>AddUserUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdminPages\AdminButtonsUserControl.xaml.cs">
       <DependentUpon>AdminButtonsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MethodistDeaneryPages\MethodistDeaneryUserControl.xaml.cs">
+      <DependentUpon>MethodistDeaneryUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\StudentPages\StudentUserControl.xaml.cs">
+      <DependentUpon>StudentUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -115,9 +136,6 @@
       <Name>StudentPerformanceServiceCL</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pages\MethodistDeanery\" />
-    <Folder Include="Pages\Student\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

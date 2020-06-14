@@ -24,5 +24,10 @@ namespace StudentPerformanceServiceCL.Services
         }
 
         public Account Account { get; set; }
+
+        public void LogOut()
+        {
+            Account = null;
+        }
     }
 }

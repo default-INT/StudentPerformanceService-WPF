@@ -10,10 +10,14 @@ namespace StudentPerformanceServiceCL.Models.Entities.Accounts
     {
         public Admin()
         {
+            Role = 0;
         }
 
         public Admin(Account account) : base(account)
         {
+            Role = 0;
         }
+
+        public override string Status => "Администратор";
     }
 }
