@@ -20,7 +20,7 @@
             <ComboBoxItem Height="30" IsSelected="True" Content="Методист деканата" />
             <ComboBoxItem Height="30" Content="Студент" />
         </ComboBox>
-        <Label Content="Выберите факультет:" HorizontalContentAlignment="Right" FontSize="16" HorizontalAlignment="Left" Margin="31,236,0,0" VerticalAlignment="Top" Width="321"/>
+        <Label x:Name="facultyGroupLabel" Content="Выберите факультет:" HorizontalContentAlignment="Right" FontSize="16" HorizontalAlignment="Left" Margin="31,236,0,0" VerticalAlignment="Top" Width="321"/>
         <ComboBox x:Name="facultyGroupComboBox" HorizontalAlignment="Left" FontSize="16" Height="30" Margin="381,238,0,0" VerticalAlignment="Top" Width="215" />
         <Label x:Name="msgLabel" HorizontalContentAlignment="Center" FontSize="16" HorizontalAlignment="Center" Margin="0
                ,279,0,0" VerticalAlignment="Top" Width="835"/>

@@ -99,6 +99,7 @@ namespace StudentPerformanceServiceWPF.Pages.AdminPages
                 switch (comboBox.SelectedIndex)
                 {
                     case 0:
+                        if (facultyGroupLabel != null) facultyGroupLabel.Content = "Выберите факультет:";
                         await Task.Run(() =>
                         {
                             var db = DAOFactory.GetDAOFactory();
@@ -106,6 +107,7 @@ namespace StudentPerformanceServiceWPF.Pages.AdminPages
                         });
                         break;
                     case 1:
+                        if (facultyGroupLabel != null) facultyGroupLabel.Content = "Выберите группу:";
                         await Task.Run(() =>
                         {
                             var db = DAOFactory.GetDAOFactory();
