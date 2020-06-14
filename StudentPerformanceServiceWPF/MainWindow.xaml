@@ -21,7 +21,7 @@
                 <RowDefinition Height="15*"/>
             </Grid.RowDefinitions>
             <Grid x:Name="mainContent" HorizontalAlignment="Left" Height="394" Margin="10,10,0,0" VerticalAlignment="Top" Width="854"/>
-            <Grid x:Name="menuContent" HorizontalAlignment="Left" Height="84" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="854"/>
+            <Grid x:Name="menuContent" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="855" Height="85"/>
         </Grid>
     </Grid>
 </Window>

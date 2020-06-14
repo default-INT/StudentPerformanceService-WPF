@@ -8,6 +8,12 @@ namespace StudentPerformanceServiceCL.Models.Entities.Accounts
 {
     public class MethodistDeanery : Account
     {
+        public int FacultyId
+        {
+            get => __facultyId.Value;
+            set => __facultyId = value;
+
+        }
         public MethodistDeanery()
         {
         }

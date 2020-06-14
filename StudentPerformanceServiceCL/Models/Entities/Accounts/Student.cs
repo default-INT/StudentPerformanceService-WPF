@@ -13,7 +13,11 @@ namespace StudentPerformanceServiceCL.Models.Entities.Accounts
     /// </summary>
     public class Student : Account
     {
-        public int GroupId => __groupId.Value;
+        public int GroupId
+        {
+            get => __groupId.Value;
+            set => __groupId = value;
+        }
         private Group group;
 
         public Student()

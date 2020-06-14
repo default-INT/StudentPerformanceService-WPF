@@ -35,6 +35,8 @@ namespace StudentPerformanceServiceCL.Models.Entities.Accounts
         public int Role { get; set; }
         [Column(Name = "group_id")]
         public int? __groupId { get; set; }
+        [Column(Name = "faculty_id")]
+        public int? __facultyId { get; set; }
 
         public Account Cast()
         {
