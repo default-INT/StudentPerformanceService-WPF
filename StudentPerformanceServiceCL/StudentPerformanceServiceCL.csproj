@@ -89,6 +89,7 @@
     <Compile Include="Models\Data\IAccountDAO.cs" />
     <Compile Include="Models\Data\IFacultyDAO.cs" />
     <Compile Include="Models\Data\IGroupDAO.cs" />
+    <Compile Include="Models\Data\ISessionDAO.cs" />
     <Compile Include="Models\Data\ISpecialtyDAO.cs" />
     <Compile Include="Models\Data\ISubjectDAO.cs" />
     <Compile Include="Models\Data\ISubjectSpecialtyDAO.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="Models\Data\PostgreDAO\PgDAOFactory.cs" />
     <Compile Include="Models\Data\PostgreDAO\PgFacultyDAO.cs" />
     <Compile Include="Models\Data\PostgreDAO\PgGroupDAO.cs" />
+    <Compile Include="Models\Data\PostgreDAO\PgSessionDAO.cs" />
     <Compile Include="Models\Data\PostgreDAO\PgSpecialtyDAO.cs" />
     <Compile Include="Models\Data\PostgreDAO\PgSubjectDAO.cs" />
     <Compile Include="Models\Data\PostgreDAO\PgSubjectSpecialtyDAO.cs" />

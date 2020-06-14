@@ -45,6 +45,8 @@ namespace StudentPerformanceServiceCL.Models.Entities.Tests
             SubjectId = test.SubjectId;
             GroupId = test.GroupId;
             Type = test.Type;
+            Semester = test.Semester;
+            SessionId = test.SessionId;
         }
 
         public Subject Subject
@@ -67,7 +69,16 @@ namespace StudentPerformanceServiceCL.Models.Entities.Tests
                 return group;
             }
         }
-        public Session Session { get; }
+        public Session Session
+        {
+            get
+            {
+                if (session != null) return session;
+                session = db.SessionDAO.Sessions
+                    .FirstOrDefault(s => s.Id == SessionId);
+                return session;
+            }
+        }
         public IEnumerable<Student> Students
         {
             get

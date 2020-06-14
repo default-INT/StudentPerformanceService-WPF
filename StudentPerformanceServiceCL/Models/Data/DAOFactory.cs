@@ -15,6 +15,7 @@ namespace StudentPerformanceServiceCL.Models.Data
         public abstract ISpecialtyDAO SpecialtyDAO { get; }
         public abstract ISubjectDAO SubjectDAO { get; }
         public abstract ITestDAO TestDAO { get; }
+        public abstract ISessionDAO SessionDAO { get;  }
         internal abstract ISubjectSpecialtyDAO SubjectSpecialtyDAO { get; }
 
         public static DAOFactory GetDAOFactory(Database database = Database.PostgreSQL)

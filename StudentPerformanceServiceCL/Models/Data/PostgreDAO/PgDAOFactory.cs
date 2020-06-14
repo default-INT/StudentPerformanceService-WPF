@@ -32,6 +32,8 @@ namespace StudentPerformanceServiceCL.Models.Data.PostgreDAO
 
         public override ITestDAO TestDAO => new PgTestDAO(_context);
 
+        public override ISessionDAO SessionDAO => new PgSessionDAO(_context);
+
         internal override ISubjectSpecialtyDAO SubjectSpecialtyDAO => new PgSubjectSpecialtyDAO(_context);
     }
 }

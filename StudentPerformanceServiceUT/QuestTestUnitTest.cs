@@ -92,5 +92,15 @@ namespace StudentPerformanceServiceUT
 
             Assert.IsNotNull(test.Students);
         }
+
+        [TestMethod]
+        public void Test_SessionGetFromDB()
+        {
+            var test = db.TestDAO.Tests.First();
+
+            Console.WriteLine(test.Session);
+
+            Assert.IsNotNull(test.Session);
+        }
     }
 }

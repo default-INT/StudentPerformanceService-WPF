@@ -11,7 +11,7 @@
             <MenuItem x:Name="statusMenuItem" Header="Гость" Height="30" Width="140" FontSize="18"/>
             <Separator Width="520" Background="WhiteSmoke"/>
             <MenuItem x:Name="fullNameMenuItem" Header="ФИО" Height="25" FontSize="18" Width="175"  Cursor="Hand" Visibility="Visible">
-                <MenuItem x:Name="exitMenuItem" Header="Выход" Height="25" FontSize="16" Click="ExitMenuItem_Click" Cursor="Hand" />
+                <MenuItem x:Name="exitMenuItem" Header="Выход" Height="25" FontSize="16" Cursor="Hand" />
             </MenuItem>
         </Menu>
         <Label x:Name="titleLabel" Content="Главное меню" FontSize="24pt" FontWeight="Bold" HorizontalAlignment="Center" Margin="10,35,10,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="874"/>

@@ -22,6 +22,7 @@ namespace StudentPerformanceServiceCL.Models.Data.PostgreDAO
         internal Table<Test> Tests => GetTable<Test>();
         internal Table<TestResult> TestResults => GetTable<TestResult>();
         internal Table<SubjectSpecialty> SubjectSpecialties => GetTable<SubjectSpecialty>();
+        internal Table<Session> Sessions => GetTable<Session>();
 
         public StudentPerformanceServiceContext(DbConnection conn) : base(conn)
         {
