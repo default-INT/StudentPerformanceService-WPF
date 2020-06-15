@@ -38,5 +38,20 @@ namespace StudentPerformanceServiceCL.Models.Entities
         public IEnumerable<Specialty> Specialties => db.SubjectSpecialtyDAO.SubjectSpecialties
             .Where(s => s.SubjectId == Id)
             .Select(s => s.Specialty);
+
+        public IEnumerable<Group> Groups
+        {
+            get
+            {
+                IEnumerable<Group> outGroups = new List<Group>();
+                foreach (var groups in Specialties.Select(s => s.Groups))
+                {
+                    outGroups = outGroups.Concat(groups);
+                }
+                return outGroups;
+            }
+        }
+
+        public override string ToString() => Name;
     }
 }

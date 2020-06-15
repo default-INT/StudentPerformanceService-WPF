@@ -41,6 +41,9 @@ namespace StudentPerformanceServiceCL.Models.Entities
         public IEnumerable<Student> Students => db.AccountDAO.Students
                     .Where(s => s.Group.SpecialtyId == Id);
 
+        public IEnumerable<Group> Groups => db.GroupDAO.Groups
+            .Where(g => g.SpecialtyId == Id);
+
         public override string ToString() => Name;
     }
 }

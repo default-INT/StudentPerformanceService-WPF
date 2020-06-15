@@ -50,5 +50,7 @@ namespace StudentPerformanceServiceCL.Models.Entities.Accounts
             get => db.TestDAO.TestResults
                 .Where(t => t.StudentId == Id);
         }
+
+        public override string ToString() => FullName + " " + Group.Name;
     }
 }

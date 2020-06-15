@@ -22,6 +22,8 @@ namespace StudentPerformanceServiceCL.Models.Entities.Tests
         public DateTime CompletionDate { get; set; }
         [Column(Name = "mark")]
         public int Mark { get; set; }
+        [Column(Name = "retake")]
+        public bool Retake { get; set; }
         [Column(Name = "attempts_number")]
         public int AttemptsNumber { get; set; }
 

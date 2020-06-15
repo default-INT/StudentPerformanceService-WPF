@@ -13,10 +13,14 @@ namespace StudentPerformanceServiceCL.Models.Entities.Tests
     {
         public OffsetTest()
         {
+            Type = 0;
         }
 
         public OffsetTest(Test test) : base(test)
         {
+            Type = 0;
         }
+
+        public override string TypeStr => "Зачёт";
     }
 }

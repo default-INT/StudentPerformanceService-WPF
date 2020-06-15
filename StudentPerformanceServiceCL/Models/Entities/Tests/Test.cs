@@ -88,7 +88,7 @@ namespace StudentPerformanceServiceCL.Models.Entities.Tests
                 IEnumerable<Student> students = new List<Student>(); ;
                 foreach (var group in groups)
                 {
-                    students.Concat(group.Students);
+                    students = students.Concat(group.Students);
                 }
                 return students;
             }
@@ -96,6 +96,10 @@ namespace StudentPerformanceServiceCL.Models.Entities.Tests
 
         public IEnumerable<TestResult> TestResults => db.TestDAO.TestResults
             .Where(t => t.TestId == Id);
+
+        public virtual string TypeStr => throw new Exception("Test undefine");
+
+        public override string ToString() => TypeStr + " по " + Subject.Name + " " + Group.Name;
 
         public Test Cast()
         {

@@ -13,10 +13,14 @@ namespace StudentPerformanceServiceCL.Models.Entities.Tests
     {
         public CourseworkTest()
         {
+            Type = 2;
         }
 
         public CourseworkTest(Test test) : base(test)
         {
+            Type = 2;
         }
+
+        public override string TypeStr => "Курсовая";
     }
 }

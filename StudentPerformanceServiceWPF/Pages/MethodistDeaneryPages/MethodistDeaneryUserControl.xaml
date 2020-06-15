@@ -7,23 +7,17 @@
              mc:Ignorable="d" 
              d:DesignHeight="85" d:DesignWidth="855">
     <Grid>
-        <Button x:Name="addTestButton" HorizontalAlignment="Left" FontSize="14" Margin="266,10,0,0" VerticalAlignment="Top" Width="110" Height="65" Cursor="Hand">
+        <Button x:Name="addTestButton" HorizontalAlignment="Left" FontSize="14" Margin="337,10,0,0" VerticalAlignment="Top" Width="110" Height="65" Cursor="Hand">
             <TextBlock>
-                Добаввить <LineBreak/>
+                Добавить <LineBreak/>
                 испытание
             </TextBlock>
         </Button>
-        <Button x:Name="sessionAddButton" HorizontalAlignment="Left" FontSize="14" Margin="387,10,0,0" VerticalAlignment="Top" Width="110" Height="65" Cursor="Hand">
+        <Button x:Name="certifyStudentButton" HorizontalAlignment="Left" FontSize="14" Margin="458,10,0,0" VerticalAlignment="Top" Width="110" Height="65" Cursor="Hand">
             <TextBlock>
                 Аттестовать <LineBreak/>
                 студентов по <LineBreak/>
                 испытанию
-            </TextBlock>
-        </Button>
-        <Button x:Name="facultyAddButton" HorizontalAlignment="Left" FontSize="14" Margin="509,10,0,0" VerticalAlignment="Top" Width="110" Height="65" Cursor="Hand">
-            <TextBlock>
-                Перевести <LineBreak/>
-                группу
             </TextBlock>
         </Button>
     </Grid>

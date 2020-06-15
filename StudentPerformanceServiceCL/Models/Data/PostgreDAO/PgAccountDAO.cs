@@ -37,6 +37,7 @@ namespace StudentPerformanceServiceCL.Models.Data.PostgreDAO
         {
             var account = _context.Accounts
                 .FirstOrDefault(a => a.Login == login && a.Password == password);
+            if (account == null) throw new Exception("Неверный логин или пароль");
             return account.Cast();
         }
 

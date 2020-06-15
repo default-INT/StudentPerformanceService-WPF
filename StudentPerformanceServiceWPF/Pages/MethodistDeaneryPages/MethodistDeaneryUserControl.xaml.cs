@@ -20,9 +20,15 @@ namespace StudentPerformanceServiceWPF.Pages.MethodistDeaneryPages
     /// </summary>
     public partial class MethodistDeaneryUserControl : UserControl
     {
+        private readonly ElementManager elementManager;
         public MethodistDeaneryUserControl()
         {
             InitializeComponent();
+
+            elementManager = ElementManager.Instance;
+
+            addTestButton.Click += (s, e) => elementManager.SetContent(new AddTestUserControl());
+            certifyStudentButton.Click += (s, e) => elementManager.SetContent(new CertifyUserControl());
         }
     }
 }

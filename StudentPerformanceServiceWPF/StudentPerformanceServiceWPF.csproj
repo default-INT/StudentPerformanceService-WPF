@@ -107,6 +107,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\MethodistDeaneryPages\AddTestUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MethodistDeaneryPages\CertifyUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\MethodistDeaneryPages\MethodistDeaneryUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -140,6 +148,12 @@
     </Compile>
     <Compile Include="Pages\AdminPages\ReportStudentPerformanceUserControl.xaml.cs">
       <DependentUpon>ReportStudentPerformanceUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MethodistDeaneryPages\AddTestUserControl.xaml.cs">
+      <DependentUpon>AddTestUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MethodistDeaneryPages\CertifyUserControl.xaml.cs">
+      <DependentUpon>CertifyUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\MethodistDeaneryPages\MethodistDeaneryUserControl.xaml.cs">
       <DependentUpon>MethodistDeaneryUserControl.xaml</DependentUpon>

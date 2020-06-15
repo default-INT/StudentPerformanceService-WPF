@@ -46,7 +46,21 @@ namespace StudentPerformanceServiceCL.Models.Data.PostgreDAO
 
         public void Add(TestResult testResult)
         {
-            _context.TestResults.InsertOnSubmit(testResult);
+            var existTest = _context.TestResults
+                .FirstOrDefault(tr => tr.TestId == testResult.TestId && tr.StudentId == testResult.StudentId);
+
+            if (existTest != null)
+            {
+                existTest.Mark = testResult.Mark;
+                existTest.CompletionDate = testResult.CompletionDate;
+                existTest.Retake = false;
+                existTest.AttemptsNumber += 1;
+            }
+            else
+            {
+                testResult.AttemptsNumber += 1;
+                _context.TestResults.InsertOnSubmit(testResult);
+            }
 
             _context.SubmitChanges();
         }
